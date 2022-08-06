@@ -4,6 +4,7 @@
   --second-main-color: #757575;
   --third-main-color: #ffffff;
   --icon-main-color: #afb1b8;
+  --timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ul {
   margin: 0;
@@ -41,6 +42,25 @@ p {
 .conteiner-header-links {
   display: flex;
   margin-left: 43px;
+}
+
+.header-link {
+  position: relative;
+}
+.header-link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  left: 0;
+  bottom: 1px;
+
+  transition: width 250ms var(--timing);
+}
+.header-link:hover::after {
+  width: 100%;
 }
 .conteiner-header-contacts {
   display: flex;
@@ -130,6 +150,7 @@ body {
 .header-link-style {
   display: flex;
   align-items: center;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -305,6 +326,32 @@ body {
   column-gap: 30px;
   padding: 0;
 }
+.works-li {
+  position: relative;
+}
+.applications {
+  position: absolute;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  bottom: 0;
+}
+.applications-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-main-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .works,
 .team,
 .clients {
@@ -618,4 +665,29 @@ body {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--third-main-color);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-close {
+  fill: #000000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
 }
