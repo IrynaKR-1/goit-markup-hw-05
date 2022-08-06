@@ -685,9 +685,15 @@ body {
 }
 .icon-close {
   fill: #000000;
+}
+.button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  background: #ffffff;
 }
