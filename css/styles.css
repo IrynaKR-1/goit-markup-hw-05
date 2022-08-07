@@ -685,6 +685,7 @@ body {
 }
 .icon-close {
   fill: #000000;
+  justify-content: center;
 }
 .button-close {
   position: absolute;
@@ -698,6 +699,10 @@ body {
   background: var(--third-main-color);
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
